@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "听见 · YouTube 双语字幕",
+  "version": "0.3.3",
+  "description": "为 YouTube 视频和直播生成双语字幕，使用本机 Whisper 与百度翻译。",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "offscreen", "storage", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8765/*", "https://www.youtube.com/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {"default_popup": "popup.html", "default_title": "听见 · 双语字幕"},
+  "options_page": "options.html",
+  "content_scripts": [
+    {"matches": ["https://www.youtube.com/*"], "js": ["media-parser.js", "media-hook.js"], "run_at": "document_start", "world": "MAIN"},
+    {"matches": ["https://www.youtube.com/*"], "js": ["sync-core.js", "content.js"], "run_at": "document_idle"}
+  ],
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'; connect-src http://127.0.0.1:8765"}
+}

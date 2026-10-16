@@ -1,0 +1,4 @@
+# Official NVIDIA CUDA 12/cuDNN 9 Windows wheels, installed in this project's venv.
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cudnn-cu12==9.2.1.18
+nvidia-cuda-runtime-cu12==12.4.127

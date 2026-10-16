@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>听见 · 双语字幕</title><link rel="stylesheet" href="ui.css"></head>
+<body class="popup">
+  <div class="top"><div class="brand"><div class="mark" aria-hidden="true">≋</div><div><h1>听见</h1><small>YOUTUBE · 双语字幕</small></div></div><button id="options" class="settings-link">设置 ↗</button></div>
+  <p class="intro">听懂正在发生的每一句。<br>为视频与直播，叠加一层双语字幕。</p>
+  <div class="card"><div class="label">CONNECTION / 本机服务</div><div class="status-row"><span id="dot" class="dot"></span><span id="connection">正在检查连接…</span></div><p id="connection-detail" class="detail">Whisper large-v3-turbo → 百度翻译</p></div>
+  <div class="card"><div class="row"><span>识别 / 翻译</span><span id="languages">自动检测 → 简体中文</span></div><div class="row"><span>音频分段</span><span id="chunk">4 秒</span></div><div class="row"><span>观看模式</span><span id="delay">画面与声音延迟 10 秒</span></div><div class="row"><span>识别引擎</span><span id="engine" class="pill">本机 GPU</span></div></div>
+  <button id="toggle" class="primary" disabled>正在检查…</button>
+  <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+  <p class="footer">仅采集你启动翻译的标签页音频<br>语音在本机识别，识别文字发送给百度翻译</p>
+  <script type="module" src="popup.js"></script>
+</body></html>

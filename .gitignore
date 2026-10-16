@@ -1,0 +1,34 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.local-settings*
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Environments, downloaded models, and dependencies
+.venv/
+venv/
+node_modules/
+models/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# Runtime data and development output
+*.log
+*.tmp
+*.bak
+test-results/
+dist/
+build/
+coverage/
+.coverage*
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
