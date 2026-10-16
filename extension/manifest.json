@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "听见 · YouTube 双语字幕",
+  "name": "听见 · YouTube 直播实时翻译",
   "version": "0.3.3",
-  "description": "为 YouTube 视频和直播生成双语字幕，使用本机 Whisper 与百度翻译。",
+  "description": "专用于 YouTube 直播实时翻译，使用本机 Whisper 与百度翻译生成双语字幕。",
   "minimum_chrome_version": "116",
   "permissions": ["activeTab", "offscreen", "storage", "scripting"],
   "host_permissions": ["http://127.0.0.1:8765/*", "https://www.youtube.com/*"],
   "background": {"service_worker": "background.js", "type": "module"},
-  "action": {"default_popup": "popup.html", "default_title": "听见 · 双语字幕"},
+  "action": {"default_popup": "popup.html", "default_title": "听见 · 直播实时翻译"},
   "options_page": "options.html",
   "content_scripts": [
     {"matches": ["https://www.youtube.com/*"], "js": ["media-parser.js", "media-hook.js"], "run_at": "document_start", "world": "MAIN"},
